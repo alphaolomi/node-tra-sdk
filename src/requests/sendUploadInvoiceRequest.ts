@@ -106,17 +106,15 @@ export async function sendUploadInvoiceRequest({
   payments,
   vatTotals,
 }: InvoiceRequest) {
-
   if (!isValidDate(date)) {
-    throw new Error(`TRA15: Date is invalid: Use format "YYYY-MM-DD"`);    
+    throw new Error(`TRA15: Date is invalid: Use format "YYYY-MM-DD"`);
   }
   if (!isValidTime(time)) {
-    throw new Error(`TRA16: Time is invalid: Use format "HH:mm:ss"`);    
+    throw new Error(`TRA16: Time is invalid: Use format "HH:mm:ss"`);
   }
   if (!token) {
     throw new Error(`TRA17: Token is required`);
   }
-  
 
   const itemsXML = getItemsXML(items);
   const totalsXML = getTotalsXML(totals);
@@ -165,7 +163,7 @@ export async function sendUploadInvoiceRequest({
       };
 
       return {
-        success: efdResponse.ACKCODE?._text == '0',
+        success: efdResponse.ACKCODE?._text === '0',
         data: resultData,
       };
     }
@@ -187,7 +185,7 @@ export async function sendUploadInvoiceRequest({
 export function getItemsXML(items: Item[]) {
   let itemsXML = '';
   if (items != null && Array.isArray(items)) {
-    items.forEach((item) => {
+    items.forEach(item => {
       let itemXML = '';
       let key: keyof typeof item;
       for (key in item) {
@@ -296,7 +294,6 @@ export function isValidDate(input: string): boolean {
  */
 export function isValidTime(input: string): boolean {
   let regex = /([0-9]+(:[0-9]+)+)/i;
+
   return regex.test(input);
 }
-
-

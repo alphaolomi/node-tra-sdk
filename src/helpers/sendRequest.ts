@@ -39,9 +39,9 @@ export async function sendRequest({ postData, headers, method, hostname, path }:
   return new Promise((resolve, reject) => {
     let data = '';
 
-    const request = https.request(options, (response) => {
+    const request = https.request(options, response => {
       response.setEncoding('utf8');
-      response.on('data', (chunk) => {
+      response.on('data', chunk => {
         data += chunk;
       });
 
@@ -54,7 +54,7 @@ export async function sendRequest({ postData, headers, method, hostname, path }:
       });
     });
 
-    request.on('error', (error) => {
+    request.on('error', error => {
       reject(error);
     });
 

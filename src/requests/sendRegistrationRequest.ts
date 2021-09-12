@@ -53,7 +53,7 @@ export async function sendRegistrationRequest({
   certSerial,
   hostname,
   path,
-}: RegistrationRequest){
+}: RegistrationRequest) {
   const regData = `<REGDATA><CERTKEY>${certKey}</CERTKEY><TIN>${tin}</TIN></REGDATA>`;
   const signature = await createSignature(signKey, regData);
   const postData = `<EFDMS>${regData}<EFDMSSIGNATURE>${signature}</EFDMSSIGNATURE></EFDMS>`;
@@ -109,7 +109,7 @@ export async function sendRegistrationRequest({
       };
 
       return {
-        success: efdResponse.ACKCODE?._text == '0',
+        success: efdResponse.ACKCODE?._text === '0',
         data: resultData,
       };
     }

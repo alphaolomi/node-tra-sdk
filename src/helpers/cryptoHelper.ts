@@ -7,10 +7,10 @@ import pem from 'pem';
  * @author Alpha Olomi <hello@alphaolomi.com>
  * @version 0.1.0
  * @api public
- * 
+ *
  * @param {string} key
  * @param {string} message
- * 
+ *
  * @returns string
  */
 export async function createSignature(key: string, message: string): Promise<string> {
@@ -31,7 +31,7 @@ export async function createSignature(key: string, message: string): Promise<str
  * @param {string} publicKey
  * @param {string} message
  * @param signature
- * 
+ *
  * @returns boolean
  */
 export async function verifySignature(

@@ -4,6 +4,7 @@ The **TRA SDK for Node.js** makes it easy for developers to access [TRA API](#) 
 
 This package implements TRA (Tanzania Revenue Authority) APIs currently supporting VFD API only
 
+
 ## Documentation
 
 Take a look at the [API docs here](https://tra-docs.netlify.app/).
