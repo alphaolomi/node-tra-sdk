@@ -1,0 +1,29 @@
+{
+    "cSpell.words": [
+        "ACKCODE",
+        "ACKMSG",
+        "CERTKEY",
+        "efdms",
+        "EFDMSRESP",
+        "EFDMSSIGNATURE",
+        "EFDSERIAL",
+        "EMONEY",
+        "NETTAMOUNT",
+        "PMTAMOUNT",
+        "PMTTYPE",
+        "RCTACK",
+        "RCTNUM",
+        "RECEIPTCODE",
+        "REGDATA",
+        "REGID",
+        "ROUTINGKEY",
+        "TAXAMOUNT",
+        "TAXCODE",
+        "TAXOFFICE",
+        "TOKENPATH",
+        "TOTALTAXEXCL",
+        "TOTALTAXINCL",
+        "VATRATE",
+        "VATTOTALS"
+    ]
+}

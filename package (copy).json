@@ -1,0 +1,49 @@
+{
+  "name": "node-tra",
+  "version": "1.1.2",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npm run clean && npx babel src --out-dir dist",
+    "build-compact": "npm run clean && npx babel src --out-dir dist --copy-files --include-dotfiles --verbose --minified --compact=true",
+    "start": "npx babel src --watch --out-dir dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/husseinmkwizu/node-tra.git"
+  },
+  "keywords": [
+    "tra",
+    "tanzania",
+    "revenue",
+    "authority",
+    "tax",
+    "vat",
+    "online",
+    "vfd",
+    "efd",
+    "module",
+    "npm",
+    "node",
+    "babel"
+  ],
+  "author": "Hussein Mkwizu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/husseinmkwizu/node-tra/issues"
+  },
+  "homepage": "https://github.com/husseinmkwizu/node-tra#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.2",
+    "@babel/plugin-proposal-optional-chaining": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "pem": "^1.14.4",
+    "xml-js": "^1.6.11"
+  }
+}

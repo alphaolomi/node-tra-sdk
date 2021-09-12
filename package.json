@@ -1,5 +1,7 @@
 {
-  
+  "name": "node-tra-sdk",
+  "author": "Alpha Olomi <hello@alphaolomi.com>",
+  "module": "dist/node-tra.esm.js",
   "version": "0.1.0",
   "license": "MIT",
   "main": "dist/index.js",
@@ -8,6 +10,26 @@
     "dist",
     "src"
   ],
+  "keywords": [
+    "tra",
+    "tanzania",
+    "revenue",
+    "authority",
+    "tax",
+    "vat",
+    "online",
+    "vfd",
+    "efd",
+    "module",
+    "npm",
+    "node",
+    "babel"
+  ],
+  "dependencies": {
+    "pem": "^1.14.4",
+    "tslib": "^2.3.1",
+    "xml-js": "^1.6.11"
+  },
   "engines": {
     "node": ">=10"
   },
@@ -27,14 +49,11 @@
     }
   },
   "prettier": {
-    "printWidth": 80,
+    "printWidth": 120,
     "semi": true,
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "node-tra",
-  "author": "Alpha Olomi",
-  "module": "dist/node-tra.esm.js",
   "size-limit": [
     {
       "path": "dist/node-tra.cjs.production.min.js",
@@ -45,7 +64,9 @@
       "limit": "10 KB"
     }
   ],
-  "devDependencies": {
-    "@types/node": "^16.9.1"
+  "devDependencies": {    
+    "@types/jest": "^25.2.1",
+    "@types/node": "^14.11.1",
+    "@types/pem": "^1.9.6"
   }
 }
