@@ -2,7 +2,7 @@
   "name": "node-tra-sdk",
   "author": "Alpha Olomi <hello@alphaolomi.com>",
   "module": "dist/node-tra.esm.js",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
