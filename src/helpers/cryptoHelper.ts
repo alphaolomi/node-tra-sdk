@@ -47,19 +47,27 @@ export async function verifySignature(
   );
 }
 
+interface KeyCertificate {
+  key: string;
+  cert: string;
+  certSerial: String;
+}
+
 /**
  *
+ * requires Node.js >= v15.6.0
  * @param filePath
  * @param password
  * @returns
  */
-export async function loadKeyCertificate(filePath: string, password: string): Promise<unknown> {
+export async function loadKeyCertificate(filePath: string, password: string): Promise<KeyCertificate> {
   return new Promise((resolve, reject) => {
     pem.readPkcs12(filePath, { p12Password: password }, (err, result) => {
       if (err != null) {
         reject(err);
       } else {
-        resolve({ key: result.key, cert: result.cert });
+        const x509 = new crypto.X509Certificate(result.cert);
+        resolve({ key: result.key, cert: result.cert, certSerial: x509.serialNumber });
       }
     });
   });
