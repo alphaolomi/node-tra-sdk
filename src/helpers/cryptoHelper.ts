@@ -59,7 +59,7 @@ export async function loadKeyCertificate(filePath: string, password: string): Pr
       if (err != null) {
         reject(err);
       } else {
-        resolve({ key: result.key });
+        resolve({ key: result.key, cert: result.cert });
       }
     });
   });
