@@ -40,19 +40,18 @@ export async function sendTokenRequest({
 
   const data = response.data;
 
-  // FIXME: remove this
-  // if (response?.headers?.ackcode != '7') {
-  // ACTIVATED
-  // console.log('DEVICE NOT ACTIVATED');
-  // }
-
   if (data != null) {
-    const resultData = JSON.parse(data);
     return {
-      success: true,
-      data: resultData,
+      success: false,
+      data: null,
     };
   }
+  const resultData = JSON.parse(data);
+
+  return {
+    success: resultData.error == 'invalid_grant' ? false : true,
+    data: resultData,
+  };
 
   return null;
 }
